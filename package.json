@@ -1,0 +1,58 @@
+{
+  "name": "@numero-dee/numerology",
+  "description": "This package aims to provide several numerology analysis tools, starting with the karma analysis.",
+  "author": "Attila Večerek <attila.vecerek@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/vecerek/numerology#numerology",
+  "repository": "github:vecerek/numerology",
+  "bugs": "https://github.com/vecerek/numerology/issues",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel --out-dir lib --quiet src",
+    "changelog": "offline-github-changelog > CHANGELOG.md",
+    "lint": "eslint src/**/*.js",
+    "lint-staged": "lint-staged",
+    "release": "bin/release",
+    "test": "jest",
+    "travis": "yarn test",
+    "watch": "babel --watch --out-dir lib src"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-transform-builtin-extend": "1.1.2",
+    "babel-preset-env": "1.7.0",
+    "eslint": "4.4.1",
+    "eslint-config-pretty-standard": "0.2.2",
+    "eslint-plugin-jest": "21.17.0",
+    "jest": "23.1.0",
+    "lint-staged": "4.0.3",
+    "offline-github-changelog": "1.2.0",
+    "pre-commit": "1.2.2",
+    "prettier": "1.5.3",
+    "prettier-package-json": "1.4.0"
+  },
+  "keywords": [
+    "analysis",
+    "karma",
+    "numerology"
+  ],
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint",
+        "prettier --write",
+        "git add"
+      ],
+      "package.json": [
+        "prettier-package-json --write",
+        "git add"
+      ]
+    }
+  },
+  "pre-commit": "lint-staged"
+}
