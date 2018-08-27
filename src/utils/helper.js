@@ -30,7 +30,7 @@ const letterToNumber = {
 const removeAccents = str =>
   str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-const numerify = str => {
+export const numerify = str => {
   const asciiStr = removeAccents(str).toLowerCase().replace(/\s/g, "");
 
   return asciiStr
@@ -39,19 +39,13 @@ const numerify = str => {
     .map(c => letterToNumber[c]);
 };
 
-const numerologicalSum = (a, b) => {
+export const numerologicalSum = (a, b) => {
   const sum = a + b;
   return Math.floor(sum / 10) + sum % 10;
 };
 
-const numerologicalKey = (a, b) => {
+export const numerologicalKey = (a, b) => {
   return a < b
     ? a * 100 + b * 10 + numerologicalSum(a, b)
     : b * 100 + a * 10 + numerologicalSum(a, b);
-};
-
-module.exports = {
-  numerify: numerify,
-  numerologicalSum: numerologicalSum,
-  numerologicalKey: numerologicalKey
 };

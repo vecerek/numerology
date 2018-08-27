@@ -1,4 +1,4 @@
-const { numerify, numerologicalSum, numerologicalKey } = require("./helper");
+import { numerify, numerologicalSum, numerologicalKey } from "./helper";
 
 describe("numerify", () => {
   it("converts a string to an array of numbers", () => {
