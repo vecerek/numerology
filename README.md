@@ -18,9 +18,9 @@ yarn add --dev @numero-dee/numerology
 ## Usage
 
 ```js
-import numerology from @numero-dee/numerology;
+import { karma } from @numero-dee/numerology;
 
-const result = numerology.karma(["Michael James Ross"], ["Harvey Reginald Specter"])
+const result = karma(["Michael James Ross"], ["Harvey Reginald Specter"])
 ```
 ### Expected outcome
 
@@ -143,6 +143,14 @@ An excerpt of the histogram of `Michael James Ross`'s pyramid would be as follow
 
 ### karma()
 
+```js
+const nameListA = ['Michael James Ross']; // non-empty array
+const nameListB = ['Harvey Reginald Specter']; //non-empty array
+
+const result = karma(nameListA, nameListB)
+// typeof result === 'object'
+```
+
 This method returns the result of the karma analysis of two or multiple people. It expects 2 non-empty arrays of strings as arguments. All the people in the first array are compared to all the people in the second array.
 
 To create comparisons between specific pairs of people, it is advised to create `multiple one-to-one comparisons` and merge the results into one object.
@@ -170,7 +178,3 @@ Alternatively, when comparing `Harvey Reginals Specter` to `Michael James Ross`,
   "total": 8
 }
 ```
-
-## Owners
-- Email: [attila.vecerek@gmail.com](mailto:attila.vecerek@gmail.com)
-- GitHub: `@vecerek`
