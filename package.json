@@ -6,7 +6,7 @@
   "homepage": "https://github.com/vecerek/numerology#numerology",
   "repository": "github:vecerek/numerology",
   "bugs": "https://github.com/vecerek/numerology/issues",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "lib/index.js",
   "files": [
     "lib"
