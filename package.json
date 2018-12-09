@@ -8,7 +8,7 @@
     "url": "git+ssh://git@github.com/vecerek/numerology.git"
   },
   "bugs": "https://github.com/vecerek/numerology/issues",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "lib/index.js",
   "files": [
     "lib"
