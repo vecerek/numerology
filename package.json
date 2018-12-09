@@ -2,9 +2,11 @@
   "name": "@numero-dee/numerology",
   "description": "This package aims to provide several numerology analysis tools, starting with the karma analysis.",
   "author": "Attila Večerek <attila.vecerek@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/vecerek/numerology#numerology",
-  "repository": "github:vecerek/numerology",
+  "homepage": "https://github.com/vecerek/numerology#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vecerek/numerology.git"
+  },
   "bugs": "https://github.com/vecerek/numerology/issues",
   "version": "0.2.1",
   "main": "lib/index.js",
@@ -13,12 +15,11 @@
   ],
   "scripts": {
     "build": "babel --out-dir lib --quiet src",
-    "changelog": "offline-github-changelog > CHANGELOG.md",
     "lint": "eslint src/**/*.js",
     "lint-staged": "lint-staged",
-    "release": "bin/release",
+    "release": "node-publisher release",
     "test": "jest",
-    "travis": "yarn test",
+    "travis": "yarn lint && yarn test",
     "watch": "babel --watch --out-dir lib src"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "eslint-plugin-jest": "21.17.0",
     "jest": "23.1.0",
     "lint-staged": "4.0.3",
+    "node-publisher": "1.1.0",
     "offline-github-changelog": "1.2.0",
     "pre-commit": "1.2.2",
     "prettier": "1.5.3",
@@ -40,6 +42,16 @@
     "analysis",
     "karma",
     "numerology"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/vecerek/numerology/blob/master/LICENSE"
+    }
   ],
   "lint-staged": {
     "linters": {
