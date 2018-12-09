@@ -2,9 +2,11 @@
   "name": "@numero-dee/numerology",
   "description": "This package aims to provide several numerology analysis tools, starting with the karma analysis.",
   "author": "Attila Večerek <attila.vecerek@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/vecerek/numerology#numerology",
-  "repository": "github:vecerek/numerology",
+  "homepage": "https://github.com/vecerek/numerology#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vecerek/numerology.git"
+  },
   "bugs": "https://github.com/vecerek/numerology/issues",
   "version": "0.2.1",
   "main": "lib/index.js",
@@ -40,6 +42,16 @@
     "analysis",
     "karma",
     "numerology"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/vecerek/numerology/blob/master/LICENSE"
+    }
   ],
   "lint-staged": {
     "linters": {
