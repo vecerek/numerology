@@ -15,12 +15,11 @@
   ],
   "scripts": {
     "build": "babel --out-dir lib --quiet src",
-    "changelog": "offline-github-changelog > CHANGELOG.md",
     "lint": "eslint src/**/*.js",
     "lint-staged": "lint-staged",
-    "release": "bin/release",
+    "release": "node-publisher release",
     "test": "jest",
-    "travis": "yarn test",
+    "travis": "yarn lint && yarn test",
     "watch": "babel --watch --out-dir lib src"
   },
   "devDependencies": {
@@ -33,6 +32,7 @@
     "eslint-plugin-jest": "21.17.0",
     "jest": "23.1.0",
     "lint-staged": "4.0.3",
+    "node-publisher": "1.1.0",
     "offline-github-changelog": "1.2.0",
     "pre-commit": "1.2.2",
     "prettier": "1.5.3",
